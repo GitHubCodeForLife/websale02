@@ -729,6 +729,7 @@ h2 {
 
 .product-item .product-image {
     position: relative;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -2198,13 +2199,16 @@ h2 {
 /**********************************/
 .login {
     position: relative;
+    margin: 100px;
     padding-top: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 .login .login-form,
 .login .register-form {
-    padding: 30px;
-    background: #ffffff;
+    padding: 50px;
+    background: #ffffff ;
     margin-bottom: 30px;
 }
 
@@ -2393,4 +2397,9 @@ h2 {
     .footer-bottom .template-by {
         text-align: center; 
     } 
+}
+.btn-login{
+    color: red;
+    width: 100%;
+    margin: 20px 0px;
 }
