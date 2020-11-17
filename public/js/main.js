@@ -235,5 +235,18 @@
             $('#' + checkbox_id + '-show').slideDown();
         }
     });
+
+    //Add to cart
+    //Id, class, .. Btn add to cart + Cart-shopping
+
+    let countcart = 0;
+    $('.fa-cart-plus').click(()=>{
+        countcart++;
+        $('.count-cart').text(countcart);
+        alert('hello');
+    });
+    //Hello guy, Today i will show you how to make/create a new project in VScode by Nodejs.
+
+
 })(jQuery);
 

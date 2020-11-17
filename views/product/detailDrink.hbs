@@ -1,5 +1,5 @@
  
-      <!-- Nav Bar Start -->
+         <!-- Nav Bar Start -->
         <div class="nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -11,8 +11,8 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
                             <a href="/" class="nav-item nav-link ">Home</a>
-                            <a href="../products" class="nav-item nav-link active">Products</a>
-                            <a href="../products" class="nav-item nav-link">Product Detail</a>
+                            <a href="../products" class="nav-item nav-link ">Products</a>
+                            <a href="../products" class="nav-item nav-link active">Product Detail</a>
                             <a href="" class="nav-item nav-link">Cart</a>
                             <a href="" class="nav-item nav-link">Checkout</a>
                             <a href="user/login" class="nav-item nav-link">My Account</a>
@@ -74,73 +74,35 @@
             </div>
         </div>
         <!-- Bottom Bar End --> 
-        
- <!-- Breadcrumb Start -->
+          
+      
+        <!-- Breadcrumb Start -->
         <div class="breadcrumb-wrap">
             <div class="container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Products</a></li>
-                    <li class="breadcrumb-item active">Product List</li>
+                    <li class="breadcrumb-item active">Product Detail</li>
                 </ul>
             </div>
         </div>
         <!-- Breadcrumb End -->
         
-        <!-- Product List Start -->
-        <div class="product-view">
+        <!-- Product Detail Start -->
+        <div class="product-detail">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-8">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="product-view-top">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="product-search">
-                                                <input type="email" value="Search">
-                                                <button><i class="fa fa-search"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="product-short">
-                                                <div class="dropdown">
-                                                    <div class="dropdown-toggle" data-toggle="dropdown">Product short by</div>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#" class="dropdown-item">Newest</a>
-                                                        <a href="#" class="dropdown-item">Popular</a>
-                                                        <a href="#" class="dropdown-item">Most sale</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="product-price-range">
-                                                <div class="dropdown">
-                                                    <div class="dropdown-toggle" data-toggle="dropdown">Product price range</div>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#" class="dropdown-item">$0 to $50</a>
-                                                        <a href="#" class="dropdown-item">$51 to $100</a>
-                                                        <a href="#" class="dropdown-item">$101 to $150</a>
-                                                        <a href="#" class="dropdown-item">$151 to $200</a>
-                                                        <a href="#" class="dropdown-item">$201 to $250</a>
-                                                        <a href="#" class="dropdown-item">$251 to $300</a>
-                                                        <a href="#" class="dropdown-item">$301 to $350</a>
-                                                        <a href="#" class="dropdown-item">$351 to $400</a>
-                                                        <a href="#" class="dropdown-item">$401 to $450</a>
-                                                        <a href="#" class="dropdown-item">$451 to $500</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div class="product-detail-top">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <div class="product-slider-single normal-slider">
+                                        <img src="{{product.cover}}" alt="Product Image">
                                     </div>
                                 </div>
-                            </div>
-                             {{#each foods}}
-                            <div class="col-md-4">
-                                <div class="product-item">
-                                    <div class="product-title">
-                                        <a href="../products/foods.{{title}}">{{title}}</a>
+                                <div class="col-md-7">
+                                    <div class="product-content">
+                                        <div class="title"><h2>{{product.title}}</h2></div>
                                         <div class="ratting">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -148,74 +110,148 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                    </div>
-                                    <div class="product-image">
-                                        <a href="product-detail.html">
-                                            <img src="{{cover}}" alt="Product Image">
-                                        </a>
-                                        <div class="product-action">
-                                            <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                            <a href="#"><i class="fa fa-heart"></i></a>
-                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        <div class="price">
+                                            <h4>Price:</h4>
+                                            <p>${{product.basePrice}}<span>$99</span></p>
                                         </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <h3><span>$</span>{{basePrice}}</h3>
-                                        <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                        <div class="quantity">
+                                            <h4>Quantity:</h4>
+                                            <div class="qty">
+                                                <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                <input type="text" value="1">
+                                                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="p-size">
+                                            <h4>Size:</h4>
+                                            <div class="btn-group btn-group-sm">
+                                                <button type="button" class="btn">S</button>
+                                                <button type="button" class="btn">M</button>
+                                                <button type="button" class="btn">L</button>
+                                                <button type="button" class="btn">XL</button>
+                                            </div> 
+                                        </div>
+                                
+                                        <div class="action">
+                                            <a class="btn" href="#"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+                                            <a class="btn" href="#"><i class="fa fa-shopping-bag"></i>Buy Now</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            {{/each}}
-                            {{#each drinks}}
-                            <div class="col-md-4">
-                                <div class="product-item">
-                                    <div class="product-title">
-                                        <a href="../products/drinks.{{title}}">{{title}}</a>
-                                        <div class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <div class="product-image">
-                                        <a href="product-detail.html">
-                                            <img src="{{cover}}" alt="Product Image">
-                                        </a>
-                                        <div class="product-action">
-                                            <a href="#"><i class="fa fa-cart-plus"></i></a>
-                                            <a href="#"><i class="fa fa-heart"></i></a>
-                                            <a href="#"><i class="fa fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-price">
-                                        <h3><span>$</span>{{basePrice}}</h3>
-                                        <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            {{/each}}
                         </div>
                         
-                        <!-- Pagination Start -->
-                        <div class="col-md-12">
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        <div class="row product-detail-bottom">
+                            <div class="col-lg-12">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="pill" href="#description">Description</a>
                                     </li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">Next</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#specification">Specification</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#reviews">Reviews (1)</a>
                                     </li>
                                 </ul>
-                            </nav>
+
+                                <div class="tab-content">
+                                    <div id="description" class="container tab-pane active">
+                                        <h4>Product description</h4>
+                                        <p>{{product.description}}
+                                        </p>
+                                    </div>
+                                    <div id="specification" class="container tab-pane fade">
+                                        <h4>Product specification</h4>
+                                        <ul>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                        </ul>
+                                    </div>
+                                    <div id="reviews" class="container tab-pane fade">
+                                        <div class="reviews-submitted">
+                                            <div class="reviewer">Phasellus Gravida - <span>01 Jan 2020</span></div>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <p>{{product.review}}
+                                            </p>
+                                        </div>
+                                        <div class="reviews-submit">
+                                            <h4>Give your Review:</h4>
+                                            <div class="ratting">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <div class="row form">
+                                                <div class="col-sm-6">
+                                                    <input type="text" placeholder="Name">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="email" placeholder="Email">
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <textarea placeholder="Review"></textarea>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <button>Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Pagination Start -->
-                    </div>           
+                        
+                        <div class="product">
+                            <div class="section-header">
+                                <h1>Related Products</h1>
+                            </div>
+
+                            <div class="row align-items-center product-slider product-slider-3">
+                                {{#each drinks}}
+                                <div class="col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product-title">
+                                            <a href="#">{{title}}</a>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-image">
+                                            <a href="product-detail.html">
+                                                <img src="{{cover}}" alt="Product Image">
+                                            </a>
+                                            <div class="product-action">
+                                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                                <a href="#"><i class="fa fa-heart"></i></a>
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <h3><span>$</span>{{basePrice}}</h3>
+                                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
                     
                     <!-- Side Bar Start -->
                     <div class="col-lg-4 sidebar">
@@ -223,7 +259,7 @@
                             <h2 class="title">Category</h2>
                             <nav class="navbar bg-light">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item">
+                                      <li class="nav-item">
                                         <a class="nav-link" href="#">
                                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-egg-fried" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M13.665 6.113a1 1 0 0 1-.667-.977L13 5a4 4 0 0 0-6.483-3.136 1 1 0 0 1-.8.2 4 4 0 0 0-3.693 6.61 1 1 0 0 1 .2 1 4 4 0 0 0 6.67 4.087 1 1 0 0 1 1.262-.152 2.5 2.5 0 0 0 3.715-2.905 1 1 0 0 1 .341-1.113 2.001 2.001 0 0 0-.547-3.478zM14 5c0 .057 0 .113-.003.17a3.001 3.001 0 0 1 .822 5.216 3.5 3.5 0 0 1-5.201 4.065 5 5 0 0 1-8.336-5.109A5 5 0 0 1 5.896 1.08 5 5 0 0 1 14 5z"/>
@@ -245,12 +281,6 @@
                                             </svg>
                                             Desserts</a>
                                     </li>
-                                    {{!-- <li class="nav-item">
-                                        <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
-                                    </li> --}}
                                 </ul>
                             </nav>
                         </div>
@@ -260,7 +290,7 @@
                                 {{#each desserts}}
                                 <div class="product-item">
                                     <div class="product-title">
-                                        <a href="../products/desserts.{{title}}">{{title}}</a>
+                                        <a href="#">{{title}}</a>
                                         <div class="ratting">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -294,17 +324,12 @@
                                 <li><a href="#">Cocacola </a><span>(45)</span></li>
                                 <li><a href="#">Pepsi </a><span>(34)</span></li>
                                 <li><a href="#">Mc's donal </a><span>(67)</span></li>
-                                {{!-- <li><a href="#">Ullamcorper</a><span>(74)</span></li>
-                                <li><a href="#">Fusce </a><span>(89)</span></li>
-                                <li><a href="#">Sagittis</a><span>(28)</span></li> --}}
                             </ul>
                         </div>
                         
                         <div class="sidebar-widget tag">
                             <h2 class="title">Tags Cloud</h2>
-                            {{!-- shift - Alt - A 
-                            ctrl ?  --}}
-                            {{!-- <a href="#">Lorem ipsum</a>
+                           {{!--  <a href="#">Lorem ipsum</a>
                             <a href="#">Vivamus</a>
                             <a href="#">Phasellus</a>
                             <a href="#">pulvinar</a>
@@ -322,7 +347,7 @@
                 </div>
             </div>
         </div>
-        <!-- Product List End -->  
+        <!-- Product Detail End -->
         
         <!-- Brand Start -->
         <div class="brand">
@@ -338,4 +363,3 @@
             </div>
         </div>
         <!-- Brand End -->
-        

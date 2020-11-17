@@ -7,7 +7,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/product');
-
+const adminRouter = require('./routes/admin');
 
 const app = express();
 app.use(express.static('public'));
@@ -22,10 +22,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Middle ware
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
-app.use('/product',productRouter);
-
+app.use('/products',productRouter);
+app.use('/admin',adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
