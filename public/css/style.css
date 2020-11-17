@@ -236,6 +236,8 @@ h2 {
 /**********************************/
 .nav {
     position: relative;
+       z-index: 1024;
+
 }
 
 @media (min-width: 992px) {
