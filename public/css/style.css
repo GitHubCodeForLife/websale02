@@ -1,15 +1,19 @@
 /**********************************/
 /********** General CSS ***********/
 /**********************************/
+
 body {
     color: #353535;
-    font-family: 'Open Sans', sans-serif;
+   /* font-family: 'Open Sans', sans-serif;*/
+   font-family:"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
-    background: #f3f6ff;
+    background-image: url("/img/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a {
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 a:hover,
@@ -44,7 +48,7 @@ h2 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #FF6F61;
+    background: #fcd600;
     color: #ffffff;
     width: 40px;
     height: 40px;
@@ -80,7 +84,7 @@ h2 {
 .form-control:focus,
 .custom-select:focus {
     box-shadow: none;
-    border-color: #FF6F61;
+    border-color: #fcd600;
 }
 
 .custom-radio,
@@ -97,22 +101,22 @@ h2 {
 .custom-radio .custom-control-input:checked~.custom-control-label::before,
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     color: #ffffff;
-    background: #FF6F61;
-    border-color: #FF6F61;
+    background: #fcd600;
+    border-color: #fcd600;
     box-shadow: none;
 }
 
 .btn {
-    color: #FF6F61;
+    color: #fcd600;
     background: #ffffff;
-    border: 1px solid #FF6F61;
+    border: 1px solid #fcd600;
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus {
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
     box-shadow: none;
 }
 
@@ -127,7 +131,7 @@ h2 {
     z-index: 1;
     opacity: 0;
     transition: .5s;
-    background: rgba(255, 111, 97, .7);
+    background: rgba(235, 201, 13, 0.7);
     border-radius: 4px;
 }
 
@@ -160,7 +164,7 @@ h2 {
 .normal-slider .slick-prev:focus::before,
 .normal-slider .slick-next:hover::before,
 .normal-slider .slick-next:focus::before {
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 .normal-slider .slick-prev::before,
@@ -189,7 +193,7 @@ h2 {
 }
 
 .normal-slider .slick-dots li.slick-active button:before {
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 .slick-dotted.slick-slider {
@@ -203,7 +207,7 @@ h2 {
 .top-bar {
     padding: 3px 0;
     font-size: 14px;
-    color: #FF6F61;
+    color: #fcd600;
     background: #000000;
 }
 
@@ -236,8 +240,7 @@ h2 {
 /**********************************/
 .nav {
     position: relative;
-       z-index: 1024;
-
+    border-radius: 10% !important;
 }
 
 @media (min-width: 992px) {
@@ -250,13 +253,14 @@ h2 {
 .nav .navbar {
     height: 100%;
     padding: 0;
+    
 }
 
 .nav .dropdown-menu {
     margin-top: 0;
     border: 0;
     border-radius: 0;
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .nav .dropdown-menu a.active {
@@ -267,7 +271,7 @@ h2 {
 @media (min-width: 768px) {
     .nav,
     .nav .navbar {
-        background: #FF6F61 !important;
+        background: #fcd600 !important;
     }
     
     .nav .navbar-brand {
@@ -283,6 +287,7 @@ h2 {
     .nav .navbar-dark a.nav-link:hover,
     .nav .navbar-dark a.nav-link.active {
         color: #000000;
+        
     }
 }
 
@@ -311,7 +316,7 @@ h2 {
 /**********************************/
 .bottom-bar {
     padding: 15px 0;
-    background: #ffffff;
+    background: #000000;
     margin-bottom: 30px;
 }
 
@@ -326,14 +331,16 @@ h2 {
 
 .bottom-bar .search {
     width: 100%;
+    
 }
 
 .bottom-bar .search input[type=text] {
     width: 100%;
     height: 40px;
     padding: 0 15px;
-    color: #666666;
-    border: 1px solid #FF6F61;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background: #fcd600;
     border-radius: 4px;
 }
 
@@ -346,13 +353,13 @@ h2 {
     padding: 0 15px;
     border: none;
     background: none;
-    color: #FF6F61;
+    color: #ffffff;
     border-radius: 0 2px 2px 0;
 }
 
 .bottom-bar .search button:hover {
-    background: #FF6F61;
-    color: #ffffff;
+    background: #ffffff;
+    color: #fcd600;
 }
 
 .bottom-bar .user {
@@ -360,26 +367,35 @@ h2 {
     text-align: right;
 }
 
+.bottom-bar .user .cart,
 .bottom-bar .user .wishlist {
     margin-right: 15px;
+    background:  #fcd600;
 }
 
 .bottom-bar .user .cart i,
 .bottom-bar .user .wishlist i {
-    color: #FF6F61;
+    color: #ffffff;
 }
 
 .bottom-bar .user .cart span,
 .bottom-bar .user .wishlist span {
-    color: #FF6F61;
+    color: #ffffff;
     font-size: 15px;
+}
+
+.bottom-bar .user .cart:hover,
+.bottom-bar .user .wishlist:hover {
+    margin-right: 15px;
+    background:  #ffffff;
 }
 
 .bottom-bar .user .cart:hover i,
 .bottom-bar .user .wishlist:hover i,
 .bottom-bar .user .cart:hover span,
 .bottom-bar .user .wishlist:hover span {
-    color: #ffffff;
+    color:   #fcd600;
+    
 }
 
 @media (min-width: 768px) {
@@ -419,12 +435,13 @@ h2 {
     height: 100%;
     max-height: 400px;
     overflow: hidden;
-    background: #ffffff !important;
+    background: #000000 !important;
 }
 
 .header .navbar-nav {
     width: 100%;
     padding: 15px 0;
+    
 }
 
 .header .navbar li {
@@ -440,12 +457,12 @@ h2 {
     color: #353535;
 }
 .header .navbar a:hover {
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 
 .header .navbar i {
-    color: #FF6F61;
+    color: #fcd600;
     width: 20px;
     text-align: center;
     margin-right: 8px;
@@ -464,6 +481,7 @@ h2 {
     position: relative;
 }
 
+
 .header-slider .header-slider-caption {
     position: absolute;
     top: 20%;
@@ -475,7 +493,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 111, 97, .7);
+    background: rgba(252, 209, 21, 0.5);
+    border-radius: 20px;
     transition: all 0.3s;
     z-index: 1;
 }
@@ -512,12 +531,14 @@ h2 {
     width: 100%;
     height: 50%;
     overflow: hidden;
+    
 }
 
 .header .img-item img {
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
+    
 }
 
 .header .img-text {
@@ -528,7 +549,7 @@ h2 {
     height: 100%;
     display: flex;
     align-items: center;
-    background: rgba(255, 111, 97, .7);
+    background:  rgba(235, 201, 13, 0.3);
     transition: all 0.3s;
     opacity: 0;
 }
@@ -561,9 +582,9 @@ h2 {
 }
 
 .breadcrumb-wrap .breadcrumb {
-    margin: 0;
-    padding: 0;
-    background: transparent;
+    margin: 15;
+    padding: 15;
+    background:  #0e0e0e;
 }
 
 
@@ -618,7 +639,7 @@ h2 {
     height: 100%;
     display: flex;
     align-items: center;
-    background: rgba(255, 111, 97, .7);
+    background:  rgba(235, 201, 13, 0.3);
     transition: all 0.3s;
     opacity: 0;
 }
@@ -659,22 +680,25 @@ h2 {
     height: 100%;
     padding: 30px 15px;
     text-align: center;
-    background: #ffffff;
+    background: #050505;
+    border-radius: 10%;
 }
 
 .feature .feature-content i {
-    color: #FF6F61;
+    color: #fcd600;
     font-size: 60px;
     margin-bottom: 30px;
 }
 
 .feature .feature-content h2 {
     font-size: 18px;
+    color: #ffffff;
 }
 
 .feature .feature-content p {
     font-size: 15px;
     margin: 0;
+    color: #ffffff;
 }
 
 
@@ -693,7 +717,7 @@ h2 {
 }
 
 .product-item:hover .product-title {
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .product-item .product-title a,
@@ -710,7 +734,7 @@ h2 {
 
 .product-item .product-title .ratting i {
     font-size: 14px;
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 .product-item .product-content .price span {
@@ -759,7 +783,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 111, 97, .5);
+    background:  rgba(235, 201, 13, 0.3);
     transition: all .3s;
     font-size: 0;
     z-index: 1;
@@ -779,7 +803,7 @@ h2 {
     font-size: 16px;
     text-align: center;
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
     border: 1px solid #ffffff;
     border-radius: 4px;
     transition: all .3s;
@@ -795,9 +819,9 @@ h2 {
 }
 
 .product-item .product-image .product-action a:hover {
-    color: #FF6F61;
+    color: #fcd600;
     background: #ffffff;
-    border: 1px solid #FF6F61;
+    border: 1px solid #fcd600;
 }
 
 .product-item .product-price {
@@ -807,7 +831,7 @@ h2 {
 }
 
 .product-item:hover .product-price {
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .product-item .product-price h3 {
@@ -824,12 +848,12 @@ h2 {
     float: right;
     border: none;
     color: #000000;
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .product-item:hover .product-price .btn,
 .product-item .product-price .btn:hover {
-    color: #FF6F61;
+    color: #fcd600;
     background: #ffffff;
 }
 
@@ -854,7 +878,7 @@ h2 {
 .product .section-header {
     margin-bottom: 30px;
     padding: 20px 30px 15px 30px;
-    color: #FF6F61;
+    color: #fcd600;
     background: #ffffff;
 }
 
@@ -865,9 +889,9 @@ h2 {
     height: 30px;
     z-index: 1;
     transition: .5s;
-    color: #FF6F61;
+    color: #fcd600;
     background: #ffffff;
-    border: 1px solid #FF6F61;
+    border: 1px solid #fcd600;
     border-radius: 4px;
 }
 
@@ -883,7 +907,7 @@ h2 {
 .product .slick-prev:focus,
 .product .slick-next:hover,
 .product .slick-next:focus {
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .product .slick-prev::before,
@@ -891,7 +915,7 @@ h2 {
     font-family: "Font Awesome 5 Free";
     font-size: 18px;
     font-weight: 900;
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 .product .slick-prev::before {
@@ -922,7 +946,7 @@ h2 {
 .product-view .product-view-top {
     padding: 30px;
     margin-bottom: 30px;
-    background: #ffffff;
+    background: #000000;
 }
 
 .product-view .product-search {
@@ -934,15 +958,15 @@ h2 {
     width: 100%;
     height: 35px;
     padding: 0 15px;
-    color: #999999;
-    background: transparent;
-    border: 1px solid #353535;
+    color: #ffffff;
+    background:  #fcd600;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     transition: all .3s;
 }
 
 .product-view .product-search input:focus {
-    border-color: #FF6F61;
+    border-color: #fcd600;
 }
 
 .product-view .product-search button {
@@ -953,7 +977,7 @@ h2 {
     right: 1px;
     text-align: center;
     background: transparent;
-    color: #353535;
+    color:  #ffffff;
     border: none;
     border-radius: 0 4px 4px 0;
     transition: all .3s;
@@ -964,8 +988,8 @@ h2 {
 }
 
 .product-view .product-search button:hover {
-    background: #FF6F61;
-    color: #ffffff;
+    background: #ffffff;
+    color:  #fcd600;
 }
 
 .product-view .product-short,
@@ -982,7 +1006,8 @@ h2 {
     height: 35px;
     padding: 5px 10px;
     background: transparent;
-    border: 1px solid #353535;
+    border: 1px solid  #fcd600;
+    color:  #fcd600;
     text-align: left;
     border-radius: 4px;
     cursor: pointer;
@@ -991,8 +1016,8 @@ h2 {
 
 .product-view .product-short .dropdown .dropdown-toggle:hover,
 .product-view .product-price-range .dropdown .dropdown-toggle:hover {
-    color: #FF6F61;
-    border-color: #FF6F61;
+    color: #fcd600;
+    border-color: #fcd600;
 }
 
 .product-view .product-short .dropdown .dropdown-toggle::after,
@@ -1023,7 +1048,7 @@ h2 {
 
 .product-view .pagination .page-item:hover .page-link,
 .product-view .pagination .page-item.active .page-link {
-    color: #FF6F61;
+    color: #fcd600;
     background: #000000;
 }
 
@@ -1050,7 +1075,8 @@ h2 {
 
 .product-detail .product-detail-top {
     padding: 0;
-    background: #ffffff;
+    background: #000000;
+    color: white;
 }
 
 .product-detail .product-slider-single img {
@@ -1059,11 +1085,11 @@ h2 {
 
 .product-detail .product-slider-single-nav {
     margin: 15px 30px 30px 30px;
-    border: 3px double #FF6F61;
+    border: 3px double #fcd600;
 }
 
 .product-detail .product-slider-single-nav .slider-nav-img {
-    border-right: 1px solid #FF6F61;
+    border-right: 1px solid #fcd600;
     overflow: hidden;
 }
 
@@ -1107,7 +1133,7 @@ h2 {
 }
 
 .product-detail .product-content .ratting i {
-    color: #FF6F61;
+    color: #fcd600;
     font-size: 16px;
 }
 
@@ -1129,9 +1155,28 @@ h2 {
     margin-right: 5px;
 }
 
+.product-detail .product-content .price .btn-group .btn,
+.product-detail .product-content .quantity .btn-group .btn,
+.product-detail .product-content .p-size .btn-group .btn,
+.product-detail .product-content .action .btn,
+.product-detail .product-content .p-color .btn-group .btn {
+    background:transparent;
+}
+
+.product-detail .product-content .price .btn-group .btn:focus,
+.product-detail .product-content .quantity .btn-group .btn:focus,
+.product-detail .product-content .p-size .btn-group .btn:focus,
+.product-detail .product-content .p-color .btn-group .btn:focus,
+.product-detail .product-content .price .btn-group .btn:hover,
+.product-detail .product-content .quantity .btn-group .btn:hover,
+.product-detail .product-content .p-size .btn-group .btn:hover,
+.product-detail .product-content .p-color .btn-group .btn:hover {
+    background: #fcd600;
+}
+
 .product-detail .product-content .price p {
     display: inline-block;
-    color: #FF6F61;
+    color: #fcd600;
     font-size: 30px;
     font-weight: 700;
     margin: 0;
@@ -1144,6 +1189,7 @@ h2 {
 }
 
 .product-detail .product-content .quantity .qty {
+    
     display: inline-block;
     font-size: 0;
 }
@@ -1155,7 +1201,7 @@ h2 {
     font-size: 16px;
     text-align: center;
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
     border: none;
 }
 
@@ -1186,7 +1232,7 @@ h2 {
 }
 
 .product-detail .nav.nav-pills .nav-link {
-    color: #FF6F61;
+    color: #fcd600;
     background: #000000;
     border-radius: 0;
     transition: all .3s;
@@ -1195,7 +1241,7 @@ h2 {
 .product-detail .nav.nav-pills .nav-link:hover,
 .product-detail .nav.nav-pills .nav-link.active {
     color: #000000;
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .product-detail .tab-content {
@@ -1226,7 +1272,7 @@ h2 {
 }
 
 .product-detail .tab-content .reviewer {
-    color: #FF6F61;
+    color: #fcd600;
     font-size: 18px;
     font-weight: 600;
 }
@@ -1238,7 +1284,7 @@ h2 {
 }
 
 .product-detail .tab-content .ratting {
-    color: #FF6F61;
+    color: #fcd600;
     margin-bottom: 15px;
 }
 
@@ -1270,9 +1316,9 @@ h2 {
     display: inline-block;
     height: 35px;
     padding: 0 15px;
-    color: #FF6F61;
+    color: #fcd600;
     background: #ffffff;
-    border: 1px solid #FF6F61;
+    border: 1px solid #fcd600;
     border-radius: 4px;
     margin-bottom: 15px;
     transition: all .3s;
@@ -1280,7 +1326,7 @@ h2 {
 
 .product-detail .tab-content .form button:hover {
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 
@@ -1330,11 +1376,11 @@ h2 {
 }
 
 .sidebar-widget.category .navbar a:hover {
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 .sidebar-widget.category .navbar i {
-    color: #FF6F61;
+    color: #fcd600;
     width: 20px;
     text-align: center;
     margin-right: 8px;
@@ -1374,7 +1420,7 @@ h2 {
 }
 
 .sidebar-widget.brands ul li a:hover {
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 .sidebar-widget.brands ul li a:hover::before {
@@ -1430,8 +1476,8 @@ h2 {
 
 .sidebar-widget.tag a:hover {
     color: #ffffff;
-    background: #FF6F61;
-    border-color: #FF6F61;
+    background: #fcd600;
+    border-color: #fcd600;
 }
 
 
@@ -1501,7 +1547,7 @@ h2 {
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
     border: none;
     border-radius: 4px;
 }
@@ -1549,7 +1595,7 @@ h2 {
 }
 
 .cart-page .coupon input:focus {
-    border-color: #FF6F61;
+    border-color: #fcd600;
 }
 
 .cart-page .coupon button {
@@ -1558,15 +1604,15 @@ h2 {
     padding: 2px 0;
     font-size: 16px;
     text-align: center;
-    color: #FF6F61;
+    color: #fcd600;
     background: #ffffff;
-    border: 1px solid #FF6F61;
+    border: 1px solid #fcd600;
     border-radius: 4px;
 }
 
 .cart-page .coupon button:hover {
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .cart-page .cart-summary {
@@ -1604,26 +1650,26 @@ h2 {
     padding: 2px 10px;
     text-align: center;
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
     border: none;
     border-radius: 4px;
 }
 
 .cart-page .cart-summary .cart-btn button:hover {
-    color: #FF6F61;
+    color: #fcd600;
     background: #000000;
 }
 
 .cart-page .cart-summary .cart-btn button:first-child {
     margin-right: 25px;
-    color: #FF6F61;
+    color: #fcd600;
     background: #ffffff;
-    border: 1px solid #FF6F61;
+    border: 1px solid #fcd600;
 }
 
 .cart-page .cart-summary .cart-btn button:first-child:hover {
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 
@@ -1692,7 +1738,7 @@ h2 {
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
     border: none;
     border-radius: 4px;
 }
@@ -1801,14 +1847,14 @@ h2 {
     font-size: 25px;
     text-align: center;
     color: #000000;
-    background: #FF6F61;
+    background: #fcd600;
     border: none;
     border-radius: 4px;
     transition: all .3s;
 }
 
 .checkout .checkout-payment .checkout-btn button:hover {
-    color: #FF6F61;
+    color: #fcd600;
     background: #000000;
 }
 
@@ -1837,7 +1883,7 @@ h2 {
 .my-account .nav.nav-pills .nav-link:hover,
 .my-account .nav.nav-pills .nav-link.active {
     color: #ffffff;
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .my-account .nav.nav-pills .nav-link i {
@@ -1875,7 +1921,7 @@ h2 {
 .call-to-action {
     position: relative;
     padding: 30px 0;
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .call-to-action .col-md-6:last-child {
@@ -1922,7 +1968,7 @@ h2 {
 .newsletter {
     position: relative;
     padding: 30px 0;
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .newsletter h1 {
@@ -1954,14 +2000,14 @@ h2 {
     right: 0;
     padding: 0 15px;
     border: none;
-    background: #FF6F61;
+    background: #fcd600;
     color: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 0 4px 4px 0;
 }
 
 .newsletter .form button:hover {
-    color: #FF6F61;
+    color: #fcd600;
     background: #000000;
 }
 
@@ -2006,7 +2052,7 @@ h2 {
     z-index: 1;
     opacity: 0;
     transition: .5s;
-    background: #FF6F61;
+    background: #fcd600;
     border-radius: 4px;
 }
 
@@ -2039,7 +2085,7 @@ h2 {
 .brand .slick-prev:focus::before,
 .brand .slick-next:hover::before,
 .brand .slick-next:focus::before {
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 .brand .slick-prev::before,
@@ -2116,7 +2162,7 @@ h2 {
 }
 
 .review .review-text .ratting i {
-    color: #FF6F61;
+    color: #fcd600;
     font-size: 14px;
 }
 
@@ -2157,7 +2203,7 @@ h2 {
 
 .contact .contact-info h3 i {
     width: 20px;
-    color: #FF6F61;
+    color: #fcd600;
     margin-right: 5px;
 }
 
@@ -2174,16 +2220,16 @@ h2 {
     padding: 5px 0;
     text-align: center;
     font-size: 18px;
-    border: 1px solid #FF6F61;
+    border: 1px solid #fcd600;
     border-radius: 4px;
 }
 
 .contact .social a i {
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 .contact .social a:hover {
-    background: #FF6F61;
+    background: #fcd600;
 }
 
 .contact .social a:hover i {
@@ -2210,8 +2256,10 @@ h2 {
 .login .login-form,
 .login .register-form {
     padding: 50px;
-    background: #ffffff ;
+    background: #000000 ;
+    color:#fcd600;
     margin-bottom: 30px;
+    border-radius: 3%;
 }
 
 
@@ -2266,7 +2314,7 @@ h2 {
 }
 
 .footer .footer-widget ul li a:hover {
-    color: #FF6F61;
+    color: #fcd600;
 }
 
 .footer .footer-widget ul li a:hover::before {
@@ -2304,8 +2352,8 @@ h2 {
 }
 
 .footer .social a:hover {
-    color: #FF6F61;
-    border-color: #FF6F61;
+    color: #fcd600;
+    border-color: #fcd600;
 }
 
 .footer .payment {
@@ -2401,7 +2449,15 @@ h2 {
     } 
 }
 .btn-login{
-    color: red;
+    color:#fcd600;
+    background-color: #000000;
     width: 100%;
     margin: 20px 0px;
 }
+.btn-register{
+    color: #fcd600;
+    background-color: #000000;
+    width: 20%;
+    margin: 20px 0px;
+}
+
