@@ -7,7 +7,8 @@ body {
    /* font-family: 'Open Sans', sans-serif;*/
    font-family:"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
-    background-image: url("/img/background.svg");
+    /* background-image: url("/img/background.svg"); */
+    background-color: rgb(187, 153, 0);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -241,7 +242,6 @@ h2 {
 .nav {
     position: relative;
     border-radius: 10% !important;
-    z-index: 1024;
 }
 
 @media (min-width: 992px) {
@@ -295,7 +295,6 @@ h2 {
 @media (max-width: 768px) {
     .nav {
         padding: 5px 0;
-        z-index: 1024;
     }
     
     .nav,
@@ -341,8 +340,8 @@ h2 {
     height: 40px;
     padding: 0 15px;
     color: #ffffff;
-    border: 1px solid #ffffff;
-    background: #fcd600;
+    border: 1px solid #fcd600;
+    background: #000000;
     border-radius: 4px;
 }
 
@@ -355,7 +354,7 @@ h2 {
     padding: 0 15px;
     border: none;
     background: none;
-    color: #ffffff;
+    color: #fcd600;
     border-radius: 0 2px 2px 0;
 }
 
