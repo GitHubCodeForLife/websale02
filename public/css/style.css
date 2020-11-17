@@ -241,6 +241,7 @@ h2 {
 .nav {
     position: relative;
     border-radius: 10% !important;
+    z-index: 1024;
 }
 
 @media (min-width: 992px) {
